@@ -70,12 +70,13 @@ function App() {
           </>
         } />
 
-        <Route path="/events" element={
-          <>
-            <Events />
-            <Footer />
-          </>
-        } />
+{/* <Route path="/events" element={
+  <>
+    <Events />
+    <Footer />
+  </>
+} /> 
+*/}
 
         <Route path="/contact" element={
           <>
