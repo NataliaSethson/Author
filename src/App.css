@@ -1,5 +1,3 @@
-
-
 * {
     padding: 0;
     margin: 0;
@@ -7,16 +5,36 @@
     text-decoration: none;
 }
 
-
 body {
-  background-color: #212427;
-  color: white;
+    background-color: #212427;
+    color: white;
 }
 
 h1, h2, h3 {
-  font-family: 'Teko', sans-serif;
+    font-family: 'Teko', sans-serif;
 }
 
 p, h2 {
-  font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.slick-slide[aria-hidden="true"] {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.slick-prev:before, 
+.slick-next:before {
+    font-family: sans-serif !important;
+    content: '←' !important;
+}
+
+.slick-next:before {
+    content: '→' !important;
+}
+
+@font-face {
+    font-family: 'slick';
+    src: local('Arial'); 
+    font-display: block;
 }
