@@ -121,7 +121,7 @@ export default function Footer() {
       <div className={styles.promotion}>
 
         <div className={styles.morgan_promo}>
-          <p>&copy; {new Date().getFullYear()} Morgan Maxwell - All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Martin Larssen - All Rights Reserved.</p>
         </div>
 
         <div className={styles.separator_container}>
