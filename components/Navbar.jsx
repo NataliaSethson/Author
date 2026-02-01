@@ -71,14 +71,14 @@ export default function Navbar() {
                     <h1 className={styles.links}>NOTICIAS</h1>
                 </Link>
 
-                <Link to="/events"
+                <Link to="/about-me"
                     className={styles.individual_link}
                     onClick={() => {
                         setBurgerMenuOpen(false);
                         window.scroll({ top: 0, left: 0, behavior: "smooth" });
                     }}
                 >
-                    <h1 className={styles.links}>EVENTS</h1>
+                    <h1 className={styles.links}>SOBRE MÍ</h1>
                 </Link>
 
                 <Link to="/contact"

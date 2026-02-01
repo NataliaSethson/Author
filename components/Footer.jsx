@@ -128,9 +128,6 @@ export default function Footer() {
           <p className={styles.separator}></p>
         </div>
 
-        <div className={styles.my_promo}>
-          <p>Website created by <Link to='https:/www.alexhernan.com' target='__blank'><span>Alex Hernán</span></Link></p>
-        </div>
 
       </div>
 
