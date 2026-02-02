@@ -21,7 +21,7 @@ export default function SocialMedia() {
 
           <div className={styles.header}>
               <h2>STAY CONNECTED</h2>
-              <h3>FOLLOW MORGAN</h3>
+              <h3>FOLLOW LARSSEN</h3>
           </div>
 
 

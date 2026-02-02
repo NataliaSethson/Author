@@ -61,7 +61,7 @@ export default function Navbar() {
                     <img className={styles.logo} src='images/logo-small-nobg.png'></img>
                 </Link>
 
-                <Link to="/media"
+                <Link to="/noticias"
                     className={styles.individual_link}
                     onClick={() => {
                         setBurgerMenuOpen(false);

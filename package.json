@@ -19,6 +19,8 @@
     "react-router": "^6.21.1",
     "react-router-dom": "^6.21.1",
     "react-slick": "^0.29.0",
+    "react-tweet": "^3.3.0",
+    "react-twitter-embed": "^4.0.4",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

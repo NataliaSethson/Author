@@ -18,6 +18,7 @@
 
 .text {
     font-size: 3rem;
+    margin-top: 0;
 }
 
  .container {
@@ -35,6 +36,15 @@
     color: #FFCC00;
     font-weight: 900;
     margin-bottom: 2rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+  margin-top: -10px !important; 
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.4;
 }
 
 .input {

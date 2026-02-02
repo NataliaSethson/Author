@@ -1,5 +1,4 @@
 
-
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import "slick-carousel/slick/slick.css";
@@ -16,10 +15,10 @@ import Newsletter from '../components/Newsletter.jsx';
 import AboutMe from '../components/AboutMe.jsx';
 import Contact from '../components/Contact.jsx';
 import Events from '../components/Events.jsx';
-import Media from '../components/Media.jsx';
 import Books from '../components/Books.jsx';
 import BookDetails from '../components/BookDetails.jsx';
 import DetectiveOculto from '../components/ElDetectiveDeloOculto.jsx';
+import Noticias from '../components/Noticias.jsx';
 
 
 
@@ -56,9 +55,9 @@ function App() {
           </>
         } />
 
-        <Route path="/media" element={
+        <Route path="/noticias" element={
           <>
-            <Media />
+            <Noticias />
             <Footer />
           </>
         } />

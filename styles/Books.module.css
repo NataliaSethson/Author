@@ -1,6 +1,16 @@
 .title_container {
    text-align: center;
    margin-top: 4rem;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.title_container h2, 
+.title_container p {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header_text_smallScreens {
@@ -56,7 +66,7 @@
     color: darkcyan;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1250px) {
     .books_container {
         grid-template-columns: repeat(3, auto);
     }
@@ -77,7 +87,7 @@
     }
     .selector_container {
         display: block;
-        text-align: left;
+        text-align: center;
         margin: 0 1rem;
     }
     .header_text {
@@ -88,7 +98,10 @@
         text-align: center;
         margin: 2rem 0;
     }
+    .image {
+        max-width: 350px;
+        margin: 0 auto;
+    }
 }
-
 
 

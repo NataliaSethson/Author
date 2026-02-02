@@ -32,7 +32,7 @@ export default function () {
     <div className={styles.wrapper}>
         
         <div className={styles.title}>
-            <h3 className={styles.text}>Get all the latest Morgan Maxwell news and info sent to your inbox</h3>
+            <h3 className={styles.text}>Get all the latest Martin Larssen news and info sent to your inbox</h3>
         </div>
 
         <form className={styles.container} onSubmit={handleSubmit}>

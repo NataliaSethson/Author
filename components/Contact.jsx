@@ -25,11 +25,12 @@ function Contact() {
     <>
       <div className={styles.wrapper}>
         <div className={styles.title}>
-          <h3 className={styles.text}>Please fill out this form if you have any inquiries</h3>
+          <h3 className={styles.text}>Ponte en contacto conmigo</h3>
         </div>
 
         <form className={styles.container} onSubmit={handleSubmit}>
-          <h3 className={styles.signup}>Contact Form</h3>
+          <h3 className={styles.signup}>Envíame un mensaje</h3>
+          <p className={styles.description}>Me encanta hablar con mis lectores. Escríbeme.</p>
           <input 
             type="text" 
             placeholder="name" 
