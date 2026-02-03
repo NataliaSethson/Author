@@ -6,7 +6,7 @@ export default function AboutMeSection() {
     <div className={styles.container}>
 
         <div className={styles.image_container}>
-            <img src='/images/male-vertical.webp'></img>
+            <img src='/images/fotoAlex.jpg'></img>
         </div>
 
         <div className={styles.about_container}>
@@ -25,7 +25,7 @@ export default function AboutMeSection() {
         </div>
 
         <div className={styles.image_container_bottom}>
-            <img src='/images/male-vertical.webp'></img>
+            <img src='/images/fotoAlex.jpg'></img>
         </div>
         
     </div>
