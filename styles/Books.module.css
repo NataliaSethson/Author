@@ -19,7 +19,7 @@
 
 .category_header {
     padding-bottom: 1rem;
-    color: darkcyan;
+    color: brown;
 }
 
 .category_title {
@@ -42,6 +42,13 @@
     text-wrap: nowrap;
 }
 
+.book_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem; 
+}
+
 .books_container {
     display: grid;
     grid-template-columns: repeat(6, auto);
@@ -50,10 +57,15 @@
     flex-grow: 1;
 }
 
+.tag_container {
+    margin-top: 0rem; 
+    text-align: center;
+}
+
 .image {
     width: 100%; 
     height: auto; 
-    padding: 1rem;
+    padding: 1rem 1rem 0rem 1rem;
 }
 
 .image:hover {

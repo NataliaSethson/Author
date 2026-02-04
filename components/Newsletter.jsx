@@ -1,52 +1,36 @@
-import { useState } from 'react';
-import styles from '../styles/Newsletter.module.css'
+import { useEffect } from 'react';
+import styles from '../styles/Newsletter.module.css';
 
-
-
-export default function () {
+export default function Newsletter() {
   
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [submitted, setSubmitted] = useState(false);
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "https://eocampaign1.com/form/04755312-0123-11f1-938b-bf68279d53ca.js";
+    script.async = true;
+    script.dataset.form = "04755312-0123-11f1-938b-bf68279d53ca";
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!name || !email) {
-      alert('Please fill in all fields');
-      return;
+    const container = document.getElementById('eo-form-container');
+    if (container) {
+      container.appendChild(script);
     }
-      // Reset form fields
 
-      setName('');
-      setEmail('');
+    return () => {
+      if (container && script.parentNode === container) {
+        container.removeChild(script);
+      }
+    };
+  }, []);
 
-      // change state to true
-
-    setSubmitted(true);
-  };
-  
-  
   return (
-    <>
-    
     <div className={styles.wrapper}>
-        
-        <div className={styles.title}>
-            <h3 className={styles.text}>Get all the latest Martin Larssen news and info sent to your inbox</h3>
-        </div>
+      <div className={styles.title}>
+        <h3 className={styles.text}>
+          Recibe todas las noticias e información de Martin Larssen en tu bandeja de entrada
+        </h3>
+      </div>
 
-        <form className={styles.container} onSubmit={handleSubmit}>
-            <h3 className={styles.signup}>Newsletter Signup</h3>
-            <input type="text" placeholder="name" className={styles.input} value={name} onChange={(e) => setName(e.target.value)}/>
-            <input type="text" placeholder="email address" className={styles.input} value={email} onChange={(e) => setEmail(e.target.value)}/>
-            <button 
-            className={styles.button}
-            type='submit'
-            >{submitted ? 'You subscribed succesfully!' : 'Subscribe'}</button>
-        </form>
-
+      <div id="eo-form-container" className={styles.container}>
+      </div>
     </div>
-
-    </>
-  )
+  );
 }
