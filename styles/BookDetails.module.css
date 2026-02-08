@@ -1,6 +1,12 @@
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+}
+
 .img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 .image_container {
@@ -10,26 +16,43 @@
     flex-shrink: 0;
 }
 
-.image_container > div {
-    width: 100% !important;
-    max-width: 100% !important;
-}
-
 .image_container div[class*="yearRow"],
-.image_container div[class*="genreRow"] {
+.info div[class*="yearRow"] {
+    display: none !important;
+}
+
+.image_container div[class*="genreRow"],
+.info div[class*="genreRow"] {
     width: 100% !important;
-    font-size: 1.2rem !important;
-    padding: 10px 0 !important;
+    font-size: 1.1rem !important;
+    padding: 8px 0 !important;
 }
 
-.related_img {
+.tag_desktop {
+    display: block;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
     width: 100%;
-    height: auto;
+    max-width: 600px;
 }
 
-.related_img:hover {
-    transform: scale(1.05);
-    transition: 0.25s ease-in-out;
+.tag_desktop > div {
+    margin: 0 !important;
+    width: 180px !important; 
+    width: fit-content;
+    min-width: 300px;
+}
+
+.tag_desktop div[class*="genreRow"] {
+    padding: 4px 15px !important; 
+    font-size: 0.9rem !important; 
+    letter-spacing: 2px; 
+    display: block; 
+    width: 100%;
+}
+
+.tag_mobile {
+    display: none;
 }
 
 .book_container {
@@ -50,16 +73,22 @@
 .title {
     font-size: 4rem;
     color: white;
+    width: fit-content;
+    display: inline-block;
+    text-align: center;
     margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.collection {
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    color: #ccc;
 }
 
 .description {
     max-width: 600px;
     line-height: 2rem;
-}
-
-.collection {
-    padding-bottom: 2rem;
 }
 
 .amazon_btn {
@@ -73,7 +102,7 @@
     border-radius: 5px;
     transition: background 0.2s;
     margin-top: 3rem;
-    align-self: flex-start;
+    align-self: flex-start; 
 }
 
 .amazon_btn:hover {
@@ -83,22 +112,23 @@
 .related_header {
     text-align: center;
     padding: 2rem 0;
-    justify-items: center;
     font-size: 1.5rem;
     margin-top: 10rem;
+    color: white;
 }
 
 .related_books_wrapper {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    margin: 0rem 10rem;
-    overflow-x: auto;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    max-width: 1200px;
 }
 
 .related_container {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
 }
 
 .related_image_container {
@@ -110,15 +140,19 @@
     width: 100%;
     height: auto;
     display: block;
+    transition: 0.25s ease-in-out;
+}
+
+.related_img:hover {
+    transform: scale(1.05);
 }
 
 @media (max-width: 1650px) {
     .book_container {
-       margin: 2rem;
+        margin: 2rem;
     }
     .related_books_wrapper {
-       grid-template-columns: repeat(4, 1fr);
-       margin: 0;
+        margin: 0;
     }
     .description {
         max-width: 650px;
@@ -130,14 +164,7 @@
 
 @media (max-width: 1250px) {
     .related_books_wrapper {
-       grid-template-columns: repeat(3, 1fr);
-       margin: 2rem;
-    }
-}
-
-@media (max-width: 950px) {
-    .related_books_wrapper {
-       grid-template-columns: repeat(2, 1fr);
+        margin: 2rem;
     }
 }
 
@@ -146,18 +173,41 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-top: 100px !important;
     }
+
+    .tag_desktop {
+        display: none;
+    }
+
+    .tag_mobile {
+        display: block;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .tag_mobile > div {
+        margin: 0 auto !important;
+    }
+
     .image_container {
         width: 280px;
-        margin: 0 auto 2rem auto;
+        margin: 0 auto 1rem auto;
     }
+
     .info {
         margin-left: 0;
         align-items: center;
     }
+
     .description {
         max-width: none;
         padding: 0 1rem;
+    }
+    .amazon_btn {
+        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -165,10 +215,12 @@
     .title {
         font-size: 2.5rem;
     }
-    .amazon_btn {
+  .amazon_btn {
         width: 100%;
         padding: 1rem;
         font-size: 1.2rem;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 

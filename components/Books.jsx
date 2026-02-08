@@ -28,6 +28,20 @@ function Books() {
     return names[key] || 'Category';
   };
 
+  const genreMapping = {
+    'secrets-of-time': 'Distopía',
+    'thriller': 'Thriller',
+    'recent': 'Thriller',
+    'science-fiction': 'Ciencia Ficción',
+    'final-girl': 'Terror',
+    'finalgirl': 'Terror',
+    'mystic-fire': 'Sobrenatural',
+    'valhalla': 'Sobrenatural',
+    'silent-stranger': 'Sobrenatural',
+    'crimen': 'Terror',
+    'standalones': 'Thriller'
+  };
+
   return (
     <>
       <div className={styles.wrapper}>
@@ -65,27 +79,35 @@ function Books() {
           </div>
 
           <div className={styles.books_container}>
-            {getBooksForCategory().map((book) => (
-              <div className={styles.book_card} key={book.name}>
-                
-                <Link
-                  to={`/books/${encodeURIComponent(book.name)}`}
-                  className={styles.book_link}
-                  onClick={() => {
-                    window.scroll({ top: 0, left: 0, behavior: "smooth" });
-                  }}
-                >
-                  <img 
-                    className={styles.image} 
-                    src={`images/covers/${book.image}`} 
-                    alt={book.name} 
+            {getBooksForCategory().map((book) => {
+              const genreToShow = genreMapping[book.type] || book.type;
+
+              return (
+                <div className={styles.book_card} key={book.name}>
+                  <Link
+                    to={`/books/${encodeURIComponent(book.name)}`}
+                    className={styles.book_link}
+                    onClick={() => {
+                      window.scroll({ top: 0, left: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <img
+                      className={styles.image}
+                      src={`images/covers/${book.image}`}
+                      alt={book.name}
+                    />
+                  </Link>
+
+                  <Tag
+                    text={
+                      book.collection?.includes('Final Girl') ? 'Terror' :
+                        (genreMapping[book.type] || book.type)
+                    }
+                    year={book.year}
                   />
-                </Link>
-
-                <Tag text={book.type} year={book.year} />
-
-              </div>
-            ))}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

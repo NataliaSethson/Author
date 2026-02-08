@@ -10,14 +10,14 @@ export default function Tag({ text, year }) {
     .toLowerCase()
     .trim()
     .replace(/\s+/g, '')
-    .replace('-', '');
+    .replace(/-/g, '');
 
   const colorClass = styles[normalizedText] || styles.default;
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.yearRow}>
-        {year ? year : "2024"}
+        {year || "2024"}
       </div>
       <div className={`${styles.genreRow} ${colorClass}`}>
         {text}

@@ -15,7 +15,7 @@ function Events() {
             <div className={styles.container}>
 
                 <p className={styles.text}>Supporting the release of <span>The Haunted House</span> on May 14th, 
-                Morgan Maxwell will be doing a book signing at the following locations:</p>
+                Martin Larssen will be doing a book signing at the following locations:</p>
 
                 <div className={styles.flex}>
 

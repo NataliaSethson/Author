@@ -6,7 +6,7 @@ export default function AboutMeSection() {
     <div className={styles.container}>
 
         <div className={styles.image_container}>
-            <img src='/images/fotoAlex.jpg'></img>
+            <img className={styles.img_alex} src='/images/fotoAlex.jpg'></img>
         </div>
 
         <div className={styles.about_container}>

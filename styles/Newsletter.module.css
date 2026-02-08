@@ -26,56 +26,7 @@
 }
 
 .container {
-    background-color: #222;
-    padding: 30px;
-    border-radius: 4px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
     min-width: 400px;
-    border-top: 4px solid #FFCC00;
-}
-
-.container :global(.emailoctopus-form-wrapper) {
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-.container :global(.emailoctopus-heading) {
-    display: none !important;
-}
-
-.container :global(input) {
-    display: block;
-    width: 100% !important;
-    padding: 12px !important;
-    margin: 10px 0 !important;
-    background: #333 !important;
-    border: 1px solid #444 !important;
-    color: white !important;
-    box-sizing: border-box;
-    font-family: inherit;
-}
-
-.container :global(button) {
-    width: 100% !important;
-    padding: 14px !important;
-    background-color: #FFCC00 !important;
-    color: #000 !important;
-    font-weight: 900 !important;
-    text-transform: uppercase;
-    border: none !important;
-    cursor: pointer;
-    margin-top: 10px !important;
-    transition: background 0.3s;
-}
-
-.container :global(button:hover) {
-    background-color: #FFDC3F !important;
-}
-
-.container :global(.emailoctopus-success-message) {
-    color: #FFCC00 !important;
-    font-weight: bold;
-    text-align: center;
 }
 
 @media (max-width: 1150px) {
@@ -88,25 +39,26 @@
 
     .title {
         max-width: 100%;
-    }
-
-    .text {
-        font-size: 2rem;
+        display: flex;
+        justify-content: center;
     }
 
     .container {
-        min-width: 90% !important;
-        padding: 25px;
+        min-width: unset;
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .container :global(.emailoctopus-form-wrapper) {
+        margin: 0 auto !important;
     }
 }
 
 @media (max-width: 500px) {
     .text {
         font-size: 1.6rem;
-    }
-    
-    .container {
-        min-width: 100% !important;
-        padding: 20px;
     }
 }

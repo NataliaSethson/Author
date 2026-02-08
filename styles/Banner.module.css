@@ -1,7 +1,7 @@
 .banner_wrapper {
     width: 100vw;
     background-color: #000; 
-    padding: 60px 0;
+    padding: 60px 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,6 +10,7 @@
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+    margin-bottom: 0;
 }
 
 
@@ -38,7 +39,7 @@
 
 .main_stripe {
     width: 100vw;
-    background-color: #2a2a2a; 
+    background-color: #F3F3F3; 
     padding: 5px 0;
     margin-top: 50px;
 }
