@@ -16,18 +16,22 @@ function Contact() {
 
     const formData = new FormData(e.target);
     
-    fetch("/", {
+    fetch("https://formspree.io/f/mjgekaww", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      headers: { "Accept": "application/json" },
+      body: formData,
     })
-      .then(() => {
+      .then((response) => {
+        if (response.ok) {
           // Reset form fields
           setName('');
           setEmail('');
           setMessage('');
-        // Here you can add your submit logic (e.g., sending data to a server)
-        setSubmitted(true);
+          // Here you can add your submit logic (e.g., sending data to a server)
+          setSubmitted(true);
+        } else {
+          alert("Error sending message");
+        }
       })
       .catch((error) => alert(error));
   };
@@ -42,11 +46,7 @@ function Contact() {
         <form 
           className={styles.container} 
           onSubmit={handleSubmit}
-          name="contact"
-          data-netlify="true"
         >
-          <input type="hidden" name="form-name" value="contact" />
-          
           <h3 className={styles.signup}>Envíame un mensaje</h3>
           <p className={styles.description}>Me encanta hablar con mis lectores. Escríbeme.</p>
           <input 
