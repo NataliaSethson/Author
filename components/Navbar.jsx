@@ -58,7 +58,7 @@ export default function Navbar() {
                         window.scroll({ top: 0, left: 0, behavior: "smooth" });
                     }}
                 >
-                    <img className={styles.logo} src='images/logo-small-nobg.png'></img>
+                    <img className={styles.logo} src='images/logo-alex.svg'></img>
                 </Link>
 
                 <Link to="/noticias"

@@ -23,10 +23,6 @@ export default function AboutMeSection() {
         </div>
 
         </div>
-
-        <div className={styles.image_container_bottom}>
-            <img src='/images/fotoAlex.jpg'></img>
-        </div>
         
     </div>
    

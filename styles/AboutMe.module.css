@@ -1,42 +1,38 @@
-
-
-
-img {
-    width: 400px;
-    height: auto;
-}
-
-
 .container {
     display: flex;
     text-align: center;
     justify-content: center;
-    margin: 0 10rem;
+    margin: 4rem 10rem 0 10rem;
     background-color: #212427;
-    margin-top: 4rem;
     border-top: 1px solid #fff;
+    min-height: 600px;
 }
 
 .about_container {
     display: block;
+    flex: 1;
 }
 
 .author_name {
     font-size: 6rem;
     font-weight: 700;
 }
+
 .subheader {
     color: #FFCC00;
 }
 
 .image_container {
-    text-align: center;
-    margin: auto;
+    flex: 0 0 500px;
+    overflow: hidden;
+    display: flex;
 }
 
-.image_container_bottom {
-    display: none;
-    visibility: hidden;
+.image_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .title_container {
@@ -47,78 +43,65 @@ img {
     padding: 0 2rem;
     margin: 0 4rem;
     line-height: 2rem;
+    text-align: left;
 }
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 1650px) {
-   
     .container {
-     
-     margin: 1rem 0;
+        margin: 1rem 0;
     }
-     .text_content {
-     margin: 0;
-    }
- }
- 
-
-@media (max-width: 900px) {
-   
-   .container {
-    display: block;
-    margin: 1rem 0;
-   }
     .text_content {
-    margin: 0;
-   }
-   .image_container {
-    display: none;
-   }
-   .image_container_bottom {
-    display: block;
-    visibility: visible;
+        margin: 0;
+    }
 }
 
-}
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
+    .about_container {
+        order: 1;
+    }
+
+    .image_container {
+        order: 2;
+        flex: none;
+        width: 100%;
+        max-width: 450px;
+        height: 600px;
+        margin: 2rem 0;
+    }
+
+    .author_name {
+        font-size: 4.5rem;
+    }
+
+    .text_content {
+        padding: 1rem 2rem;
+        margin: 0;
+    }
+}
 
 @media (max-width: 550px) {
-   
     .author_name {
-        font-size: 4rem;
-    }
- 
- }
-
- @media (max-width: 450px) {
-   
-    .author_name {
-        font-size: 4.25rem;
-    }
-    .subheader {
-        font-size: 1.25rem;
+        font-size: 3.5rem;
     }
 
-    img {
-        width: 200px;
+    .image_container {
+        max-width: 100%;
+        height: 350px;
     }
- }
+}
 
- @media (max-width: 450px) {
-   
+@media (max-width: 450px) {
     .author_name {
         font-size: 3rem;
     }
     .subheader {
         font-size: 1rem;
     }
- }
+}
 
