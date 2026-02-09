@@ -13,12 +13,23 @@ function Contact() {
       alert('Please fill in all fields');
       return;
     }
+
+    const formData = new FormData(e.target);
+    
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
           // Reset form fields
           setName('');
           setEmail('');
           setMessage('');
-    // Here you can add your submit logic (e.g., sending data to a server)
-    setSubmitted(true);
+        // Here you can add your submit logic (e.g., sending data to a server)
+        setSubmitted(true);
+      })
+      .catch((error) => alert(error));
   };
 
   return (
@@ -28,24 +39,34 @@ function Contact() {
           <h3 className={styles.text}>Ponte en contacto conmigo</h3>
         </div>
 
-        <form className={styles.container} onSubmit={handleSubmit}>
+        <form 
+          className={styles.container} 
+          onSubmit={handleSubmit}
+          name="contact"
+          data-netlify="true"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          
           <h3 className={styles.signup}>Envíame un mensaje</h3>
           <p className={styles.description}>Me encanta hablar con mis lectores. Escríbeme.</p>
           <input 
             type="text" 
+            name="name"
             placeholder="name" 
             className={styles.input} 
             value={name} 
             onChange={(e) => setName(e.target.value)}
           />
           <input 
-            type="text" 
+            type="email" 
+            name="email"
             placeholder="email address" 
             className={styles.input} 
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <textarea 
+            name="message"
             placeholder="message" 
             className={styles.input_message}
             value={message}
